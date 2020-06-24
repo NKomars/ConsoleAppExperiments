@@ -6,16 +6,10 @@ namespace ConsoleAppExperiments
     {
         static void Main(string[] args)
         {
-            Human person = new Human();
-            person.Name = "Ņiķita";
-            person.Surname = "Komars";
-            person.Age = 20;
-            person.EyeColor = "Brown";
+            Human person = new Human("Ņiķita", "Komars", 20, "Brown");            
             person.Introduce();
-
-            person.Name = "Jānis";
-            person.Surname = "Roks";
-            person.Introduce();
+           
+            person.AddNumbers(6, 85);
 
         }
     }
