@@ -6,10 +6,10 @@ namespace ConsoleAppExperiments
 {
     class Human
     {
-        public string Name { get; }
-        public string Surname { get; }
-        public int Age { get; set; }
-        public string EyeColor { get; set; }
+        public string Name { get;  }
+        public string Surname { get;  }
+        public int Age { get; private set; }
+        public string EyeColor { get;  }
 
         public Human(string name, string surname, int age, string eyeColor)
         {
@@ -29,5 +29,37 @@ namespace ConsoleAppExperiments
         {
             Console.WriteLine(a + b);
         }
+
+        public void SayName()
+        {
+            Console.WriteLine(this.Name);
+        }
+
+        public void SetAge(int age)
+        {
+            if (age<0)
+            {
+                return;
+            }
+            else if (age<this.Age)
+            {
+                Console.WriteLine("The new age is younger, are u sure to change it?");
+                string answer = Console.ReadLine();
+                if (answer == "y")
+                {
+                    this.Age = age;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                this.Age = age;
+            }
+            
+        }
+
     }
 }
