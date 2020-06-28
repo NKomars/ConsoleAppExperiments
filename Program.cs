@@ -15,22 +15,24 @@ namespace ConsoleAppExperiments
             persons.Add(new Human("Michael", "Johnson", 14, "Green"));
             persons.Add(new Human("Agnese", "Egle", 19, "Gray"));
 
-            persons[1].SetAge(15);
-            
-            //persons[0].Introduce();
-            //persons[1].Introduce();
-            //persons[2].Introduce();
-            //persons[3].Introduce();
-
-            //for (int i = 0; i < persons.Count; i++)
-            //{
-            //    persons[i].Introduce();
-            //}
-
+            //persons[1].SetAge(15);
+                       
             foreach (var person in persons)
             {
                 person.Introduce();
             }
+
+            //create some accounts here
+            List<BankAccount> accounts = new List<BankAccount>();
+            accounts.Add(new BankAccount("Jenifer", 200, "EUR"));
+            accounts.Add(new BankAccount("Anna", 5000, "EUR"));
+            accounts.Add(new BankAccount("Michael", 30, "EUR"));
+
+            foreach (var account in accounts)
+            {
+                account.PrintInfo();
+            }
+
         }
     }
 
