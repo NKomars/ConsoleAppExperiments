@@ -15,9 +15,8 @@ namespace ConsoleAppExperiments
             persons.Add(new Human("Michael", "Johnson", 14, "Green"));
             persons.Add(new Human("Agnese", "Egle", 19, "Gray"));
 
-            persons[1].SetAge(-5);
+            persons[1].SetAge(15);
             
-
             //persons[0].Introduce();
             //persons[1].Introduce();
             //persons[2].Introduce();
