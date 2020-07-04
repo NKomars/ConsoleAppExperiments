@@ -33,6 +33,14 @@ namespace ConsoleAppExperiments
                 account.PrintInfo();
             }
 
+            //make some transactions on Jenifer's account
+            accounts[0].MakeDeposit(-100, "birthday gift");
+            accounts[0].MakeDeposit(400, "first salary");
+            accounts[0].MakeDeposit(50, "Bonus");
+            Console.WriteLine(accounts[0].Balance);
+            accounts[0].MakeWithdrawal(1500, "Online course");
+            Console.WriteLine(accounts[0].Balance);
+            
         }
     }
 
